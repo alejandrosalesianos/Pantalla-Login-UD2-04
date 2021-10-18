@@ -1,0 +1,15 @@
+<form (ngSubmit)="onLogin()" #form="ngForm">
+    <label for="email">Email</label>
+    <input id="email" [(ngModel)]="persona.email" name="email">
+    <br>
+        <label for="contrasenia">Contraseña</label>
+        <input id="contrasenia" [(ngModel)]="persona.contrasenia" name="contrasenia" [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <br>
+        <button type="submit" class="btn btn-success">Login</button>
+  </form>
+  <p>Email que se va a guardar: {{persona.email}}</p>
+  <p>Contraseña que se va a guardar: {{persona.contrasenia}}</p>
+
