@@ -8,12 +8,15 @@ import { FormComponent } from './form/form.component';
 import { CustomToolbarComponent } from './custom-toolbar/custom-toolbar.component';
 import { MaterialImportModule } from './modules/material-import.module';
 import { FormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
-    CustomToolbarComponent
+    CustomToolbarComponent,
+    RegisterComponent
     
   ],
   imports: [
@@ -21,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialImportModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

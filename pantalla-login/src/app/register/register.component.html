@@ -1,0 +1,15 @@
+<form (ngSubmit)="doSignUp()" #form="ngForm">
+    <label for="user">Username</label>
+    <input id="user" [(ngModel)]="signUpDto.username" name="username">
+    <br>
+    <label for="email">Email</label>
+    <input id="email" [(ngModel)]="signUpDto.email" name="email">
+    <br>
+        <label for="contrasenia">Contraseña</label>
+        <input id="contrasenia" [(ngModel)]="signUpDto.password" name="password" [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <br>
+        <button type="submit" class="btn btn-success">Login</button>
+  </form>
